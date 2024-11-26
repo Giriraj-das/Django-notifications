@@ -10,7 +10,12 @@ from user.models import User
 
 class NotificationService:
     @staticmethod
-    def create_notification(user: User, notification_type: int, template_id: int, options: list[dict[str: int, str: str]] = None):
+    def create_notification(
+            user: User,
+            notification_type: int,
+            template_id: int,
+            options: list[dict[str: int, str: str]] = None
+    ):
         """
         Создает нотификацию для пользователя на основе шаблона.
         user: Объект пользователя
