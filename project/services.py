@@ -17,11 +17,11 @@ class NotificationService:
             options: list[dict[str: int, str: str]] = None
     ):
         """
-        Создает нотификацию для пользователя на основе шаблона.
-        user: Объект пользователя
-        notification_type: Тип уведомления (1 - системное, 2 - push, ...)
-        template_id: ID шаблона нотификации
-        options: Опции для UserNotificationOption (список словарей {'field_id': int, 'txt': str})
+        Creates a notification for a user based on a template.
+        user: User object
+        notification_type: Notification type (1 - system, 2 - push, ...)
+        template_id: Notification template ID
+        options: Options for UserNotificationOption (list of dictionaries {'field_id': int, 'txt': str})
         """
         notification_setting = UserNotificationSetting.objects.filter(
             user=user,
@@ -30,7 +30,6 @@ class NotificationService:
 
         if not notification_setting or not notification_setting.system_notification:
             return None
-
         try:
             template = NotificationTemplate.objects.get(id=template_id)
         except NotificationTemplate.DoesNotExist:
