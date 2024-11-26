@@ -13,7 +13,7 @@ class Country(models.Model):
         db_table = 'country'
 
     def __str__(self):
-        return self.name
+        return self.name or ''
 
 
 class Language(models.Model):
@@ -25,7 +25,7 @@ class Language(models.Model):
         db_table = 'language'
 
     def __str__(self):
-        return self.name
+        return self.name or ''
 
 
 class NotificationCategory(models.Model):
@@ -37,7 +37,7 @@ class NotificationCategory(models.Model):
         db_table = 'notification_category'
 
     def __str__(self):
-        return self.name
+        return self.name or ''
 
 
 class NotificationTemplate(models.Model):
@@ -57,7 +57,7 @@ class NotificationTemplate(models.Model):
         db_table = 'notification_template'
 
     def __str__(self):
-        return self.name
+        return self.name or ''
 
 
 class Project(models.Model):
@@ -81,7 +81,7 @@ class Project(models.Model):
         db_table = 'project'
 
     def __str__(self):
-        return self.name
+        return self.name or ''
 
 
 FIELD_CHOICES = [
@@ -128,7 +128,7 @@ class TranslationString(models.Model):
         ]
 
     def __str__(self):
-        return self.language.name
+        return self.language.name or ''
 
 
 class UserNotification(models.Model):
@@ -159,7 +159,7 @@ class UserNotification(models.Model):
         ]
 
     def __str__(self):
-        return self.user.email
+        return self.user.email or ''
 
 
 class UserNotificationOption(models.Model):
@@ -181,7 +181,7 @@ class UserNotificationOption(models.Model):
         ]
 
     def __str__(self):
-        return self.txt
+        return self.txt or ''
 
 
 class UserNotificationSetting(models.Model):
@@ -211,4 +211,4 @@ class UserNotificationSetting(models.Model):
         ]
 
     def __str__(self):
-        return self.user.email
+        return self.user.email or ''
