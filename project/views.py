@@ -23,7 +23,7 @@ class UserNotificationListView(ListAPIView):
 
         filters = {'user': user}
         if notification_type:
-            filters['notification_type'] = notification_type
+            filters['notification_type'] = notification_type  # Default lookup is "__exact"
         if status_:
             filters['status'] = status_
         if category_id:

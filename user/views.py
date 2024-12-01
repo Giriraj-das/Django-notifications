@@ -18,6 +18,6 @@ class VacancyListView(ListAPIView):
             user=request.user,
             notification_type=1,
             template_id=1,
-            options=[{'field_id': 1, 'txt': 888}, {'field_id': 2, 'txt': 'Test project 5'}]
+            options=[{'field_id': 1, 'txt': 357}, {'field_id': 2, 'txt': 'Test project 3'}]
         )
         return response
