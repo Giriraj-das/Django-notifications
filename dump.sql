@@ -141,7 +141,7 @@ CREATE TABLE `notification_template` (
 
 LOCK TABLES `notification_template` WRITE;
 /*!40000 ALTER TABLE `notification_template` DISABLE KEYS */;
-INSERT INTO `notification_template` VALUES (1,1,'import_finished','The import for <a href=\"/project/{1}/\">{2}</a> has been successfully completed.'),(2,2,'assessment_completed','The assessment for <a href=\"/project/assessment/{1}/\">{2}</a> has been successfully completed.');
+INSERT INTO `notification_template` VALUES (1,1,'import_finished','The import for <a href=\"/project/{0}/\">{1}</a> has been successfully completed.'),(2,2,'assessment_completed','The assessment for <a href=\"/project/assessment/{0}/\">{1}</a> has been successfully completed.');
 /*!40000 ALTER TABLE `notification_template` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -209,7 +209,7 @@ CREATE TABLE `translation_string` (
 
 LOCK TABLES `translation_string` WRITE;
 /*!40000 ALTER TABLE `translation_string` DISABLE KEYS */;
-INSERT INTO `translation_string` VALUES (7,8,1,4,1,'The import for <a href=\"/project/{1}/\">{2}</a> has been successfully completed.'),(8,8,1,4,2,'Der Import für <a href=\"/project/{1}/\">{2}</a> wurde erfolgreich abgeschlossen.');
+INSERT INTO `translation_string` VALUES (7,8,1,4,1,'The import for <a href=\"/project/{0}/\">{1}</a> has been successfully completed.'),(8,8,1,4,2,'Der Import für <a href=\"/project/{0}/\">{1}</a> wurde erfolgreich abgeschlossen.');
 /*!40000 ALTER TABLE `translation_string` ENABLE KEYS */;
 UNLOCK TABLES;
 
