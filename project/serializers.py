@@ -12,7 +12,6 @@ class NotificationSerializer(serializers.ModelSerializer):
 
     def get_txt(self, obj):
         notification_template = obj.notification_template
-        print(notification_template.translations)
         if notification_template and notification_template.translations:
             translation = notification_template.prefetched_translations[0]
             txt = translation.text
@@ -20,7 +19,6 @@ class NotificationSerializer(serializers.ModelSerializer):
             txt = obj.notification_template.txt
 
         options_list = [option.txt for option in obj.options.order_by('field_id')]
-        options_list.insert(0, 12)
         try:
             return txt.format(*options_list)
         except IndexError as e:
